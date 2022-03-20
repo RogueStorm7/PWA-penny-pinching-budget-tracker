@@ -1,22 +1,7 @@
 let transactions = [];
 let myChart;
-const img1 = require("./public/icons/icon-96x96.png");
-const img2 = require("./public/icons/icon-144x144.png");
-const carouselSlides = [
-  {
-    title: "",
-    subtitle: "",
-    img: img1,
-    btnText: "",
-    btnUrl: "" 
-  },
-    {
-    title: "",
-    subtitle: "",
-    img: img2,
-    btnText: "",
-    btnUrl: "" 
-  },
+
+
 fetch("/api/transaction")
   .then(response => {
     return response.json();
