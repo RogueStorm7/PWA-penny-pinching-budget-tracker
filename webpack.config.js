@@ -1,7 +1,7 @@
 const { model } = require("mongoose")
 const { Script } = require("vm");
 const path = require('path');
-
+const WebpackPwaManifest = require("webpack-pwa-manifest");
 model.exports = {
     entry: './assets/js/Script.js',
     output: {

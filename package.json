@@ -1,5 +1,5 @@
 {
-  "name": "budget-app",
+  "name": "penny-pinching-budget-app",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
@@ -32,6 +32,7 @@
     "save": "^2.4.0"
   },
   "devDependencies": {
-    "file-loader": "^6.2.0"
+    "file-loader": "^6.2.0",
+    "webpack-pwa-manifest": "^4.3.0"
   }
 }

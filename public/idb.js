@@ -56,10 +56,11 @@ function checkDatabase() {
         const transaction = db.transaction(["in progress"], "readwrite");
 
         // access "in progress" object store
-        const store = transaction.objectStore("in progress");
+        const store = transaction.objectStore.store("in progress");
 
         // clear all items in store
         store.clear();
+        alert("Whoop! Transaction successfully submitted")
       });
     }
   };

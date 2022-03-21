@@ -1,8 +1,8 @@
 const FILES_TO_CACHE = [
 "/",
-"/index.html",
-"/styles.css",
-"/index.js",
+"../index.html",
+"/css/styles.css",
+"/js/index.js",
 "/icons/icon-192x192.png",
 "/icons/icon-512x512.png",
 ];
@@ -14,7 +14,7 @@ self.addEventListener("install", function (evt) {
   evt.waitUntil(
     caches.open(CACHE_NAME).then(cache => {
       console.log("Files successfully pre-cached 😌!");
-      return cache.addAll(FILES_TO_CACHE);
+      // return cache.addAll(FILES_TO_CACHE);
     })
   );
    self.skipWaiting();
@@ -68,7 +68,7 @@ self.addEventListener("fetch", function (evt) {
         if (response) {
           return response;
         } else if (evt.request.headers.get("accept").includes("text/html")) {
-          // return  cached home page for ALL requests for html pages
+          // returns cached home page for ALL requests for html pages
           return caches.match("/");
         }
       });
